@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 1fr ;
+  grid-template-areas: 
+  "header-area"
+  "main-area"
+  "footer-area";
+  max-width: 1388px;
+  height: 100vh;
+}
+
+/* ==================== HEADER ====================== */
+
+header {
+  grid-area: header-area;
+  background-color: brown;
+}
+
+/* ==================== MAIN ====================== */
+
+main {
+  grid-area: main-area;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr ;
+  grid-template-areas: 
+  "round-pic-area round-pic-area big-pic-area big-pic-area"
+  "... ... big-pic-area big-pic-area "
+  "left-side-area central-area central-area right-area";
+}
+
+/* ------------ MAIN GRID AREAS ------------*/
+.main__round-pictures {
+  grid-area: round-pic-area;
+}
+
+.main__big-picture {
+  grid-area: big-pic-area;
+}
+
+.main__left-sidebar {
+  grid-area: left-side-area;
+}
+
+.main__central-area {
+  grid-area: central-area;
+}
+
+.main__right-sidebar {
+  grid-area: right-area;
+}
+
+/* ==================== FOOTER ====================== */
+
+footer {
+  grid-area: footer-area;
+  background-color: green;
+}
