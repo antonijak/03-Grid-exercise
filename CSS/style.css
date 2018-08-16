@@ -27,6 +27,10 @@ header {
   "main-title navigation"
   "... ...";
 }
+
+h1 {
+  color: #2F5766;
+}
 /* ------------ HEADER GRID AREAS ------------*/
 
 /* -------- MAIN TITLE --------*/
@@ -45,6 +49,7 @@ nav {
 
 #nav__home {
   grid-area: home;
+  background-color: #DCDEDF;
 }
 
 #nav__about {
@@ -67,7 +72,7 @@ nav {
 
 main {
   grid-area: main-area;
-  background-color: blue;
+  background-color: #BDD5DC;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 2fr 3fr;
@@ -76,6 +81,7 @@ main {
   "main-text main-text big-pic-area big-pic-area "
   "left-side-area central-area central-area right-area";
 }
+
 
 /* ------------ MAIN GRID AREAS ------------*/
 
@@ -134,7 +140,7 @@ main {
   background-position: 50%;
 }
 
-/* ----- MAIN TEXT -----*/
+/* ----- MAIN h2 TEXT -----*/
 
 #main__text {
   grid-area: main-text;
@@ -173,6 +179,7 @@ main__text p {
 
 .main__left-sidebar {
   grid-area: left-side-area;
+  background-color: white;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr 2fr;
@@ -203,6 +210,8 @@ main__text p {
 
 .main__central-area {
   grid-area: central-area;
+  padding: 1.5rem;
+  background-color: white;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -223,11 +232,22 @@ main__text p {
 
 .main__right-sidebar {
   grid-area: right-area;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__right-sidebar ul {
+   list-style-position: inside;
+   padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* ==================== FOOTER ====================== */
 
 footer {
   grid-area: footer-area;
-  background-color: green;
+  background-color: #F4F5F6;
 }
