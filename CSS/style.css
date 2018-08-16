@@ -12,7 +12,6 @@ body {
   "main-area"
   "footer-area";
   max-width: 1300px;
-  height: 100vh;
   margin: auto;
 }
 
@@ -71,10 +70,10 @@ main {
   background-color: blue;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr ;
+  grid-template-rows: 1fr 2fr 3fr;
   grid-template-areas: 
   "round-pic-area round-pic-area big-pic-area big-pic-area"
-  "... ... big-pic-area big-pic-area "
+  "main-text main-text big-pic-area big-pic-area "
   "left-side-area central-area central-area right-area";
 }
 
@@ -135,6 +134,30 @@ main {
   background-position: 50%;
 }
 
+/* ----- MAIN TEXT -----*/
+
+#main__text {
+  grid-area: main-text;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas: 
+  "small-title"
+  "big-title"
+  "paragraph";
+}
+
+main__text h3 {
+  grid-area: small-title;
+}
+
+main__text h2 {
+  grid-area: big-title;
+}
+
+main__text p {
+  grid-area: paragraph;
+}
 
 /* ----- BIG PICTURE -----*/
 .main__big-picture {
@@ -142,13 +165,47 @@ main {
   margin-top: -6rem;
 }
 
+.main__big-picture img {
+  height: 100%;
+}
+
+/* ----- LEFT SIDEBAR -----*/
+
 .main__left-sidebar {
   grid-area: left-side-area;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-template-areas: 
+  "title"
+  "1"
+  "2"
+  "3";
 }
+
+.main__left-sidebar h4 {
+  grid-area: title;
+}
+
+#left-sidebar__1 {
+  grid-area: 1;
+}
+
+#left-sidebar__2 {
+  grid-area: 2;
+}
+
+#left-sidebar__3 {
+  grid-area: 3;
+}
+
+/* ----- CENTRAL AREA -----*/
 
 .main__central-area {
   grid-area: central-area;
 }
+
+/* ----- RIGHT SIDEBAR -----*/
 
 .main__right-sidebar {
   grid-area: right-area;
