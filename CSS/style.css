@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
   border: 1px solid black;
+  margin: 0;
 }
 
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 1fr ;
+  grid-template-rows: 1fr 3fr .7fr ;
   grid-template-areas: 
   "header-area"
   "main-area"
@@ -32,7 +33,6 @@ h1 {
   color: #2F5766;
 }
 /* ------------ HEADER GRID AREAS ------------*/
-
 /* -------- MAIN TITLE --------*/
 .header__main-title {
   grid-area: main-title;
@@ -179,6 +179,7 @@ main__text p {
 
 .main__left-sidebar {
   grid-area: left-side-area;
+  padding: 2rem;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
@@ -210,7 +211,7 @@ main__text p {
 
 .main__central-area {
   grid-area: central-area;
-  padding: 1.5rem;
+  padding: 2rem 0;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
@@ -232,22 +233,88 @@ main__text p {
 
 .main__right-sidebar {
   grid-area: right-area;
+  padding: 2rem;
+  padding-left: 2.5rem;
   background-color: white;
   display: flex;
   flex-direction: column;
 }
 
 .main__right-sidebar ul {
-   list-style-position: inside;
-   padding-left: 0;
+  
+  padding-left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
+li {
+  padding: 1rem 0;
+  position: relative;
+}
+
+  li::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  transform: translateX(-50%);
+  border-top: 2px dashed #A2A3A4;
+  width: 107%;
+  height: 100%;
+  margin: 0 auto;
+} 
+
+
 
 /* ==================== FOOTER ====================== */
 
 footer {
   grid-area: footer-area;
   background-color: #F4F5F6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: 
+  "f1 f2 f3 f4 f5"
+  "f6 f6 f6 f6 f6";
+}
+
+#footer__1 {
+  grid-area: f1;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer__2 {
+  grid-area: f2;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer__3 {
+  grid-area: f3;
+  display: flex;
+  flex-direction: column;
+}
+#footer__4 {
+  grid-area: f4;
+  display: flex;
+  flex-direction: column;
+}
+#footer__5 {
+  grid-area: f5;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer__6 {
+  grid-area: f6;
+   height: 100px;
+}
+
+#footer__6 h5 {
+  text-align: center;
+  padding-top: 2.5rem;;
+
 }
