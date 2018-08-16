@@ -203,6 +203,20 @@ main__text p {
 
 .main__central-area {
   grid-area: central-area;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "1"
+  "2";
+}
+
+#central-area__row1 {
+  grid-area: 1;
+}
+
+#central-area__row2 {
+  grid-area: 2;
 }
 
 /* ----- RIGHT SIDEBAR -----*/
