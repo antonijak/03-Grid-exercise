@@ -4,14 +4,15 @@
   margin: 0;
 }
 
+:root {
+  --h1-txt-color: #2F5766;
+}
+
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr .7fr ;
-  grid-template-areas: 
-  "header-area"
-  "main-area"
-  "footer-area";
+  grid-template-rows: 1fr 3fr .7fr;
+  grid-template-areas: "header-area" "main-area" "footer-area";
   max-width: 1300px;
   margin: auto;
 }
@@ -23,28 +24,55 @@ header {
   height: 20rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr ;
-  grid-template-areas: 
-  "main-title navigation"
-  "... ...";
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "main-title navigation" "... ...";
+  align-items: start;
+  padding: 2rem;
 }
 
 h1 {
-  color: #2F5766;
+  color: var(--h1-txt-color);
+  font-size: 8rem;
+  font-family: 'Libre Baskerville', serif;
+  margin: 0;
+  position: relative;
+  text-shadow: 2px 0 0 white, 
+  -2px 0 0 white,
+   0 2px 0 white, 
+   0 -2px 0 white, 
+   1px 1px white,
+  -1px -1px 0 white,
+    1px -1px 0 white,
+  -1px 1px 0 white,
+   2.5px 0 1px #999999,
+  -2.5px 0 2px #999999,
+   0 2.5px 2px #999999, 
+   0 -2.5px 2px #999999, 
+   1.5px 1.5px 2px #999999,
+  -1.5px -1.5px 2px #999999,
+   1.5px -1.5px 2px #999999, 
+  -1.5px 1.5px 2px #999999;
 }
+
+
+
+
 /* ------------ HEADER GRID AREAS ------------*/
+
 /* -------- MAIN TITLE --------*/
+
 .header__main-title {
   grid-area: main-title;
 }
+
 /* -------- NAVIGATION --------*/
+
 nav {
   grid-area: navigation;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-  "home about services products contact";
+  grid-template-areas: "home about services products contact";
 }
 
 #nav__home {
@@ -76,16 +104,13 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 2fr 3fr;
-  grid-template-areas: 
-  "round-pic-area round-pic-area big-pic-area big-pic-area"
-  "main-text main-text big-pic-area big-pic-area "
-  "left-side-area central-area central-area right-area";
+  grid-template-areas: "round-pic-area round-pic-area big-pic-area big-pic-area" "main-text main-text big-pic-area big-pic-area " "left-side-area central-area central-area right-area";
 }
-
 
 /* ------------ MAIN GRID AREAS ------------*/
 
 /* ----- ROUND PICTURES -----*/
+
 .main__round-pictures {
   grid-area: round-pic-area;
   margin-top: -6rem;
@@ -94,8 +119,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-  "meeting flags chart";
+  grid-template-areas: "meeting flags chart";
   justify-items: center;
   align-items: center;
   margin-left: 2rem;
@@ -147,10 +171,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 2fr;
-  grid-template-areas: 
-  "small-title"
-  "big-title"
-  "paragraph";
+  grid-template-areas: "small-title" "big-title" "paragraph";
 }
 
 main__text h3 {
@@ -166,6 +187,7 @@ main__text p {
 }
 
 /* ----- BIG PICTURE -----*/
+
 .main__big-picture {
   grid-area: big-pic-area;
   margin-top: -6rem;
@@ -184,11 +206,7 @@ main__text p {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr 2fr;
-  grid-template-areas: 
-  "title"
-  "1"
-  "2"
-  "3";
+  grid-template-areas: "title" "1" "2" "3";
 }
 
 .main__left-sidebar h4 {
@@ -216,9 +234,7 @@ main__text p {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-  "1"
-  "2";
+  grid-template-areas: "1" "2";
 }
 
 #central-area__row1 {
@@ -241,7 +257,6 @@ main__text p {
 }
 
 .main__right-sidebar ul {
-  
   padding-left: 0;
   display: flex;
   flex-direction: column;
@@ -253,7 +268,7 @@ li {
   position: relative;
 }
 
-  li::after {
+li::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -263,9 +278,7 @@ li {
   width: 107%;
   height: 100%;
   margin: 0 auto;
-} 
-
-
+}
 
 /* ==================== FOOTER ====================== */
 
@@ -275,9 +288,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr;
-  grid-template-areas: 
-  "f1 f2 f3 f4 f5"
-  "f6 f6 f6 f6 f6";
+  grid-template-areas: "f1 f2 f3 f4 f5" "f6 f6 f6 f6 f6";
 }
 
 #footer__1 {
@@ -297,11 +308,13 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
 #footer__4 {
   grid-area: f4;
   display: flex;
   flex-direction: column;
 }
+
 #footer__5 {
   grid-area: f5;
   display: flex;
@@ -310,11 +323,11 @@ footer {
 
 #footer__6 {
   grid-area: f6;
-   height: 100px;
+  height: 100px;
 }
 
 #footer__6 h5 {
   text-align: center;
-  padding-top: 2.5rem;;
-
+  padding-top: 2.5rem;
+  ;
 }
