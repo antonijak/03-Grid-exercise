@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  border: 1px solid black;
 }
 
 body {
@@ -10,15 +11,57 @@ body {
   "header-area"
   "main-area"
   "footer-area";
-  max-width: 1388px;
+  max-width: 1300px;
   height: 100vh;
+  margin: auto;
 }
 
 /* ==================== HEADER ====================== */
 
 header {
   grid-area: header-area;
-  background-color: brown;
+  height: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr ;
+  grid-template-areas: 
+  "main-title navigation"
+  "... ...";
+}
+/* ------------ HEADER GRID AREAS ------------*/
+
+/* -------- MAIN TITLE --------*/
+.header__main-title {
+  grid-area: main-title;
+}
+/* -------- NAVIGATION --------*/
+nav {
+  grid-area: navigation;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "home about services products contact";
+}
+
+#nav__home {
+  grid-area: home;
+}
+
+#nav__about {
+  grid-area: about;
+}
+
+#nav__services {
+  grid-area: services;
+}
+
+#nav__products {
+  grid-area: products;
+}
+
+#nav__contact {
+  grid-area: contact;
 }
 
 /* ==================== MAIN ====================== */
@@ -36,12 +79,67 @@ main {
 }
 
 /* ------------ MAIN GRID AREAS ------------*/
+
+/* ----- ROUND PICTURES -----*/
 .main__round-pictures {
   grid-area: round-pic-area;
+  margin-top: -6rem;
+  margin-right: -5rem;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "meeting flags chart";
+  justify-items: center;
+  align-items: center;
+  margin-left: 2rem;
 }
 
+.round__picture {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  padding: 2px;
+}
+
+.round__picture:before {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+#round__meeting {
+  grid-area: meeting;
+  background-image: url(../assets/Meeting.jpeg);
+  background-position: 50%;
+}
+
+#round__flags {
+  grid-area: flags;
+  background-image: url(../assets/Flags.jpg);
+  background-position: 50%;
+}
+
+#round__chart {
+  grid-area: chart;
+  background-image: url(../assets/Chart.jpg);
+  background-position: 50%;
+}
+
+
+/* ----- BIG PICTURE -----*/
 .main__big-picture {
   grid-area: big-pic-area;
+  margin-top: -6rem;
 }
 
 .main__left-sidebar {
