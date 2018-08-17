@@ -258,14 +258,26 @@ main {
   grid-template-rows: .2fr 1fr 1fr 1fr;
   grid-template-areas: "title" "1a" "2a" "3a";
   margin-right: -1rem;
+  line-height: 1.5rem;
 }
 
 .left-sidebar__container {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.left-sidebar__container a {
+  padding: 0 .3rem;
+  color: #ABB0B3;
+  text-decoration: none;
 }
 
 .main__left-sidebar h4 {
   grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #295061;
+  font-size: 1.3rem;
 }
 
 #left-sidebar__1 {
@@ -273,7 +285,7 @@ main {
   border-bottom: 1px dashed gray;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #left-sidebar__2 {
@@ -281,14 +293,24 @@ main {
   border-bottom: 1px dashed gray;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #left-sidebar__3 {
   grid-area: 3a;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.sidebar-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.views {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
 }
 
 /* ----- CENTRAL AREA -----*/
@@ -305,8 +327,23 @@ main {
 
 #central-area__row1 {
   grid-area: 1;
+  
 }
 
+#central-area__row1 h4 {
+grid-area: title;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: #295061;
+font-size: 1.3rem;
+line-height: 2rem;
+text-align: justify;
+}
+
+#central-area__row1 p {
+  line-height: 1.5rem;
+  }
 #central-area__row2 {
   grid-area: 2;
 }
