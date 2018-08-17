@@ -12,7 +12,7 @@
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 20% 65% 15%;
+  grid-template-rows: 20% 70% 10%;
   grid-template-areas: "header-area" "main-area" "footer-area";
   max-width: 1300px;
   margin: auto;
@@ -261,11 +261,11 @@ main {
   line-height: 1.5rem;
 }
 
-.left-sidebar__container {
+.left-sidebar__container p {
   font-size: 1.1rem;
 }
 
-.left-sidebar__container a {
+.text-area-links a {
   padding: 0 .3rem;
   color: #ABB0B3;
   text-decoration: none;
@@ -282,7 +282,7 @@ main {
 
 #left-sidebar__1 {
   grid-area: 1a;
-  border-bottom: 1px dashed gray;
+  border-bottom: 2px dashed gray;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -290,7 +290,7 @@ main {
 
 #left-sidebar__2 {
   grid-area: 2a;
-  border-bottom: 1px dashed gray;
+  border-bottom: 2px dashed gray;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -303,7 +303,7 @@ main {
   justify-content: space-evenly;
 }
 
-.sidebar-links {
+.text-area-links {
   display: inline-flex;
   flex-wrap: wrap;
 }
@@ -317,7 +317,7 @@ main {
 
 .main__central-area {
   grid-area: central-area;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
@@ -325,12 +325,24 @@ main {
   grid-template-areas: "1" "2";
 }
 
-#central-area__row1 {
-  grid-area: 1;
-  
+.central-area__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-#central-area__row1 h4 {
+.central-area__row p {
+line-height: 1.5rem;
+font-size: 1.1rem;
+}
+
+
+#central-area__row1 {
+  grid-area: 1;
+  border-bottom: 2px dashed grey;
+}
+
+.central-area__row h4 {
 grid-area: title;
 display: flex;
 flex-direction: column;
@@ -341,12 +353,19 @@ line-height: 2rem;
 text-align: justify;
 }
 
-#central-area__row1 p {
-  line-height: 1.5rem;
-  }
 #central-area__row2 {
   grid-area: 2;
 }
+#central-area__row2 img{
+  width: 7.8rem;
+}
+
+#text-and-image {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 
 /* ----- RIGHT SIDEBAR -----*/
 
@@ -391,7 +410,7 @@ footer {
   background-color: #F4F5F6;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 60% 40%;
   grid-template-areas: "f1 f2 f3 f4 f5" "f6 f6 f6 f6 f6";
 }
 
@@ -427,11 +446,8 @@ footer {
 
 #footer__6 {
   grid-area: f6;
-  height: 100px;
 }
 
 #footer__6 h5 {
   text-align: center;
-  padding-top: 2.5rem;
-  ;
 }
