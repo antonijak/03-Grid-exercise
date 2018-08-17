@@ -257,6 +257,7 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: .2fr 1fr 1fr 1fr;
   grid-template-areas: "title" "1a" "2a" "3a";
+  margin-right: -1rem;
 }
 
 .left-sidebar__container {
@@ -270,22 +271,31 @@ main {
 #left-sidebar__1 {
   grid-area: 1a;
   border-bottom: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #left-sidebar__2 {
   grid-area: 2a;
   border-bottom: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #left-sidebar__3 {
   grid-area: 3a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* ----- CENTRAL AREA -----*/
 
 .main__central-area {
   grid-area: central-area;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
@@ -310,6 +320,7 @@ main {
   background-color: white;
   display: flex;
   flex-direction: column;
+  margin-left: -1rem;
 }
 
 .main__right-sidebar ul {
