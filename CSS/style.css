@@ -136,7 +136,7 @@ main {
   background-image: linear-gradient(#E3EAEA, #B9D2D9);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-rows: 1fr 1.5fr 3fr;
   grid-template-areas: "round-pic-area round-pic-area big-pic-area big-pic-area" "main-text main-text big-pic-area big-pic-area " "left-side-area central-area central-area right-area";
 }
 
@@ -202,22 +202,28 @@ main {
 
 #main__text {
   grid-area: main-text;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-template-areas: "small-title" "big-title" "paragraph";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  color: #254b59;
+  height: 90%;
 }
 
-main__text h3 {
-  grid-area: small-title;
+#main__text h3 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
-main__text h2 {
-  grid-area: big-title;
+#main__text h2 {
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
-main__text p {
-  grid-area: paragraph;
+#main__text p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  padding-top: 1rem;
 }
 
 /* ----- BIG PICTURE -----*/
