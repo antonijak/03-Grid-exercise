@@ -204,13 +204,13 @@ main {
   grid-area: main-text;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 20% 70%;
+  grid-template-rows: 10% 19% 71%;
   grid-template-areas: "small-title" "big-title" "paragraph";
   justify-content: center;
   padding-left: 2rem;
-  /* line-height: 2rem; */
   height: 90%;
   margin-top: 2rem;
+  color: #2A4F5F;
 }
 
 #main__text h3 {
@@ -255,12 +255,12 @@ main {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: .5fr 1fr 1fr 1fr;
+  grid-template-rows: .2fr 1fr 1fr 1fr;
   grid-template-areas: "title" "1a" "2a" "3a";
 }
 
 .left-sidebar__container {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .main__left-sidebar h4 {
@@ -274,6 +274,7 @@ main {
 
 #left-sidebar__2 {
   grid-area: 2a;
+  border-bottom: 1px dashed gray;
 }
 
 #left-sidebar__3 {
