@@ -431,6 +431,7 @@ footer {
   grid-template-rows: 60% 40%;
   grid-template-areas: "f1 f2 f3 f4 f5" "f6 f6 f6 f6 f6";
   color: #6F7C7F;
+  padding: 0 2rem;
 }
 
 .footer-item {
@@ -438,9 +439,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1.8rem 0 0;
   font-size: 1.1rem;
-  line-height: 1.8rem;
+  line-height: 1.9rem;
 }
 
 #footer__1 {
@@ -477,6 +478,7 @@ footer {
 
 #footer__6 {
   grid-area: f6;
+  padding-bottom: 2rem;
 }
 
 #footer__6 h5 {
@@ -484,4 +486,5 @@ footer {
   font-size: 1.2rem;
   color: #C0C1C2;
   font-weight: normal;
+  
 }
