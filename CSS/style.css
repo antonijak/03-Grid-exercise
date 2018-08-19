@@ -29,6 +29,7 @@ header {
   grid-template-areas: "main-title navigation" "... ...";
   align-items: start;
   padding: 3rem;
+  padding-left: 1rem;
 }
 
 /* ------------ HEADER GRID AREAS ------------*/
@@ -38,8 +39,11 @@ header {
 .header__main-title {
   grid-area: main-title;
 }
+ #logo-image {
+  width: 100%;
+ }
 
-h1 {
+/* h1 {
   background-image: -webkit-linear-gradient(#c6d2d8, #375A65);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,7 +63,7 @@ h1 {
   text-align: end;
   color: #5C6566;
   font-size: 1.7rem;
-}
+} */
 
 /* -------- NAVIGATION --------*/
 nav {
@@ -266,18 +270,9 @@ main {
 }
 
 .text-area-links a {
-  padding: 0 .3rem;
-  color: #ABB0B3;
-  text-decoration: none;
-}
-
-.main__left-sidebar h4 {
-  grid-area: title;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #295061;
-  font-size: 1.3rem;
+ margin-right: .5rem;
+ text-decoration: none;
+ color: #ADAEAF;
 }
 
 #left-sidebar__1 {
@@ -306,23 +301,24 @@ main {
 .text-area-links {
   display: inline-flex;
   flex-wrap: wrap;
-}
-
-.views {
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
+  justify-content: space-between;
+  max-width: 14rem;
 }
 
 /* ----- CENTRAL AREA -----*/
 
 .main__central-area {
   grid-area: central-area;
-  padding: 0 1rem;
+  padding: .5rem 1rem 0;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "1" "2";
+}
+
+.main__central-area .text-area-links {
+ max-width: 19rem;
 }
 
 .central-area__row {
@@ -342,7 +338,7 @@ font-size: 1.1rem;
   border-bottom: 2px dashed grey;
 }
 
-.central-area__row h4 {
+.main-area-title {
 grid-area: title;
 display: flex;
 flex-direction: column;
@@ -353,18 +349,36 @@ line-height: 2rem;
 text-align: justify;
 }
 
+/* CENTRAL AREA ROW 2 */
+
 #central-area__row2 {
   grid-area: 2;
-}
-#central-area__row2 img{
-  width: 7.8rem;
-}
-
-#text-and-image {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: 
+  "row-title row-title"
+  "row-image row-tal";
 }
 
+#central-area__row2 h4 {
+  grid-area: row-title;
+}
+
+#central-area__row2 img {
+  grid-area: row-image;
+  width: 100%;
+}
+
+#text-and-links {
+  grid-area: row-tal;
+  margin-left: 1.5rem;
+}
+
+#central-area__row2 p {
+  margin-bottom: 1rem;
+  
+}
 
 
 /* ----- RIGHT SIDEBAR -----*/
@@ -387,11 +401,15 @@ text-align: justify;
 }
 
 li {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.li-border {
   position: relative;
 }
 
-li::after {
+ .li-border::before {
   content: "";
   position: absolute;
   top: 100%;
