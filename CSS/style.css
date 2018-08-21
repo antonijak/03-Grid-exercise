@@ -729,7 +729,8 @@ footer {
   }
 
   .main__round-pictures {
-    padding: 0 4rem;
+    padding: 0 1rem;
+    align-self: center;
   }
 
   #main__text {
@@ -743,8 +744,11 @@ footer {
   }
 
   .main__big-picture {
-    width: 100%;
-    padding: 0 10rem;
+  justify-content: space-around;
+  }
+
+  .main__big-picture img {
+    width: 60%;
   }
 
   .header__nav-button {
