@@ -601,17 +601,31 @@ footer {
     margin-top: 2rem;
   }
 
+  .main__left-sidebar {
+    padding: 2rem;
+  }
+
+  .main__central-area {
+    padding: 0 2rem 0;
+    margin: 0;
+  }
+   
+  .main__right-sidebar {
+    padding: 2rem;
+    margin: 0;
+  }
+
   footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 60% 40%;
     grid-template-areas: "f1 f2 f3" "f4 f5 f6";
     color: #6F7C7F;
-    padding: 0 2rem;
+    padding: 0 2rem 2rem;
   }
 
 } 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 780px) {
 
   header { 
     height: fit-content;
@@ -636,19 +650,25 @@ footer {
   }
 
   .main__round-pictures {
-    width: 90%;
-    margin: 1rem 2.4rem 1rem;
+    margin: 3rem 0;
+    width: 100%;
   }
+  
+  .round__picture {
+    height: 12rem;
+    width: 12rem;
+  }
+  
 
   .main__big-picture {
-    margin: 0 1rem 0 0;
+    margin: 0 1.5rem 0 0;
   }
 
   #main__text {
     grid-template-rows: .5fr 1fr 2fr;
     margin-top: 2rem;
     height: 90%;
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
   
   #main__text h3 {
@@ -664,16 +684,12 @@ footer {
     line-height: 1.5rem;
   }
 
-  .footer-item {
-    margin-bottom: 1rem;
-  }
-
   .main__left-sidebar {
     padding: 2rem;
   }
 
   .main__central-area {
-    padding-top: 0;
+    padding: 0 2rem 0;
     margin: 0;
   }
    
@@ -681,6 +697,82 @@ footer {
     padding: 2rem;
     margin: 0;
   }
- 
+
+
+  .footer-item {
+    margin-bottom: 1rem;
+  }
+
+  #footer__6 {
+    padding-top: 4rem;
+  }
+
   
+}
+
+@media only screen and (max-width: 620px) {
+ 
+  html {
+    font-size: 12px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "round-pic-area" 
+    "main-text"
+    "big-pic-area" 
+    "central-area" 
+    "left-side-area" 
+    "right-area";
+  }
+
+  .main__round-pictures {
+    padding: 0 4rem;
+  }
+
+  #main__text {
+    width: 100%;
+    padding: 0 3em;
+    text-align: center;
+  }
+
+  #main__text h3, #main__text h2 {
+    justify-content: center;
+  }
+
+  .main__big-picture {
+    width: 100%;
+    padding: 0 10rem;
+  }
+
+  .header__nav-button {
+    border-radius: 5px;
+  }
+
+  .main__right-sidebar ul {
+    border-left: 3rem solid white;
+  }
+
+  .main__left-sidebar{
+    margin-right: 0;
+  }
+
+  .li-border::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    transform: translateX(-50%);
+    border-top: 2px dashed #A2A3A4;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .left-sidebar__container {
+    padding: 1rem;
+  }
+
 }
