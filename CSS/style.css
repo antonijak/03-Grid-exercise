@@ -293,6 +293,8 @@ main:before {
  color: #ADAEAF;
 }
 
+
+
 #left-sidebar__1 {
   grid-area: 1a;
   border-bottom: 2px dashed gray;
@@ -506,6 +508,8 @@ footer {
   font-weight: normal;
   
 }
+
+
 
 /* ================================================
                  MEDIA QUERIES 
